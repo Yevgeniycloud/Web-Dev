@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AlbumsService } from '../albums.service';
 
+
+
 @Component({
   selector: 'app-albums',
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.scss']
 })
+
 export class AlbumsComponent implements OnInit {
   albums: any[] = [];
 
@@ -22,4 +25,5 @@ export class AlbumsComponent implements OnInit {
       this.albums = this.albums.filter(album => album.id !== id);
     });
   }
+  
 }
